@@ -417,6 +417,32 @@ If you need cycles.
 Langchain Expression Language allows you to easily define chains (DAGs) but does not have a good mechanism for adding in cycles.
 `langgraph` adds that syntax.
 
+
+## How-to Guides
+
+These guides show how to use LangGraph in particular ways.
+
+### Async
+
+If you are running LangGraph in async workflows, you may want to create the nodes to be async by default.
+For a walkthrough on how to do that, see [this documentation](https://github.com/langchain-ai/langgraph/blob/main/examples/async.ipynb)
+
+### Streaming Tokens
+
+Sometimes language models take a while to respond and you may want to stream tokens to end users.
+For a guide on how to do this, see [this documentation](https://github.com/langchain-ai/langgraph/blob/main/examples/streaming-tokens.ipynb)
+
+### Persistence
+
+LangGraph comes with built-in persistence, allowing you to save the state of the graph at point and resume from there.
+For a walkthrough on how to do that, see [this documentation](https://github.com/langchain-ai/langgraph/blob/main/examples/persistence.ipynb)
+
+### Human-in-the-loop
+
+LangGraph comes with built-in support for human-in-the-loop workflows. This is useful when you want to have a human review the current state before proceeding to a particular node.
+For a walkthrough on how to do that, see [this documentation](https://github.com/langchain-ai/langgraph/blob/main/examples/human-in-the-loop.ipynb)
+
+
 ## Examples
 
 ### ChatAgentExecutor: with function calling
@@ -454,25 +480,6 @@ We also have a lot of examples highlighting how to slightly modify the base chat
 - [Force calling a tool first](https://github.com/langchain-ai/langgraph/blob/main/examples/agent_executor/force-calling-a-tool-first.ipynb): How to always call a specific tool first
 - [Managing agent steps](https://github.com/langchain-ai/langgraph/blob/main/examples/agent_executor/managing-agent-steps.ipynb): How to more explicitly manage intermediate steps that an agent takes
 
-### Async
-
-If you are running LangGraph in async workflows, you may want to create the nodes to be async by default.
-For a walkthrough on how to do that, see [this documentation](https://github.com/langchain-ai/langgraph/blob/main/examples/async.ipynb)
-
-### Streaming Tokens
-
-Sometimes language models take a while to respond and you may want to stream tokens to end users.
-For a guide on how to do this, see [this documentation](https://github.com/langchain-ai/langgraph/blob/main/examples/streaming-tokens.ipynb)
-
-### Persistence
-
-LangGraph comes with built-in persistence, allowing you to save the state of the graph at point and resume from there.
-For a walkthrough on how to do that, see [this documentation](https://github.com/langchain-ai/langgraph/blob/main/examples/persistence.ipynb)
-
-### Human-in-the-loop
-
-LangGraph comes with built-in support for human-in-the-loop workflows. This is useful when you want to have a human review the current state before proceeding to a particular node.
-For a walkthrough on how to do that, see [this documentation](https://github.com/langchain-ai/langgraph/blob/main/examples/human-in-the-loop.ipynb)
 
 ### Planning Agent Examples
 
